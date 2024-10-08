@@ -18,7 +18,7 @@ Zoom in 2
 -
 ![zoom2](https://github.com/user-attachments/assets/0b1a3fa1-db33-41ac-bfd4-e955e8912f68)
 
-Cool Structures
+Cool Structures and different color settings
 -
 ![blue](https://github.com/user-attachments/assets/37b81f37-e12b-49f9-8a73-e59dcda52955)
 ![vortex](https://github.com/user-attachments/assets/a8fd1cd8-72aa-4ea1-aa0b-bac9b7cb3520)
