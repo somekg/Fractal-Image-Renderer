@@ -1,7 +1,6 @@
 #pragma once
 #include <cstdint>
 using namespace std;
-
 #pragma pack(2)
 
 namespace me {
