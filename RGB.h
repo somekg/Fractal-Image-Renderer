@@ -1,8 +1,7 @@
 #pragma once
-namespace me {
-	struct RGB
-	{
 
+namespace me {
+	struct RGB {
 		double r{ 0 };
 		double g{ 0 };
 		double b{ 0 };
@@ -12,4 +11,3 @@ namespace me {
 	};
 	RGB operator-(const RGB& first, const RGB& second);
 }
-
