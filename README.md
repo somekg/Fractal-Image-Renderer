@@ -5,7 +5,8 @@ enabling detailed exploration of the fractal. Developed in C++ using Visual Stud
 it is based on concepts from the "Advanced C++" course by Cave of Programming. 
 The number of iterations, color scheme, and zoom level are fully customizable, allowing for a tailored fractal experience.
 
-When you ran it, it takes some seconds or minutes depending on number of iterations to generate the .bmp file.
+When you ran it, it takes some seconds or minutes depending on number of iterations to generate the .bmp file
+To find the desired coordinates in which to zoom I use GIMP to see the coordinates in the bitmap.
 
 General view
 -
