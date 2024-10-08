@@ -4,12 +4,8 @@
 using namespace std;
 
 namespace me {
-	Mandelbrot::Mandelbrot() {
-
-	}
-	Mandelbrot::~Mandelbrot() {
-
-	}
+	Mandelbrot::Mandelbrot() {}
+	Mandelbrot::~Mandelbrot() {}
 	int Mandelbrot::getIterations(double x, double y) {
 		complex<double> z = 0;
 		complex<double> c(x, y);
@@ -28,10 +24,4 @@ namespace me {
 
 		return iterations;
 	}
-
-
-
-
-
-
 }
