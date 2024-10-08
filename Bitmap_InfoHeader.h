@@ -1,10 +1,7 @@
 #pragma once
-
-#include <cstdint>
-
-using namespace std;
-
 #pragma pack(2)
+#include <cstdint>
+using namespace std;
 
 namespace me
 {
