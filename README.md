@@ -10,6 +10,10 @@ To find the desired coordinates in which to zoom I use GIMP to see the coordinat
 
 If you love this type of mathematics visualization this program will surely be fun to mess around. 
 
+How to run
+-
+Downloading Visual Studio and using the clone repository option is the easiest option. You can also do it manually with GCC/Clang and the Command promt, I don't really know how to do that so you'll need to search for a tutorial on how to run github repositories like that. 
+
 General view
 -
 ![Normal](https://github.com/user-attachments/assets/51ea77a8-30c9-4a6a-b5ce-ecfa11a74d38)
