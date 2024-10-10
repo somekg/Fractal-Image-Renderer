@@ -28,6 +28,7 @@ Zoom in 2
 
 Cool Structures and different color settings
 -
+![cool](https://github.com/user-attachments/assets/83a32724-d640-4f27-bd4c-d1f175a8fe14)
 ![blue](https://github.com/user-attachments/assets/37b81f37-e12b-49f9-8a73-e59dcda52955)
 ![vortex](https://github.com/user-attachments/assets/a8fd1cd8-72aa-4ea1-aa0b-bac9b7cb3520)
 ![orange](https://github.com/user-attachments/assets/68c5f5a5-8914-4508-bb8a-cfa5c766e8f0)
