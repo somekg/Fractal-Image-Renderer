@@ -12,7 +12,7 @@ If you love this type of mathematics visualization this program will surely be f
 
 How to run
 -
-Downloading Visual Studio and using the clone repository option is the easiest option. You can also do it manually with GCC/Clang and the Command promt, I don't really know how to do that so you'll need to search for a tutorial on how to run github repositories like that. 
+Downloading Visual Studio and using the clone repository option is the easiest option. You can also do it manually with GCC/Clang and the Command promt but I haven't done it that way
 
 General view
 -
