@@ -17,7 +17,6 @@ using namespace std;
 enum class AppState { Idle, Animating, Rendering4K };
 
 int main() {
-    // Remove const so the window can be resized/fullscreened
     unsigned int winW = 800;
     unsigned int winH = 450; 
     
@@ -37,7 +36,6 @@ int main() {
     sf::Texture lowResTex; lowResTex.resize(sf::Vector2u(800, 450));
     sf::Texture highResTex; highResTex.resize(sf::Vector2u(3840, 2160));
     
-    // THIS FIXES THE "FUNKY" ALIASING!
     lowResTex.setSmooth(true);
     highResTex.setSmooth(true); 
     
@@ -90,13 +88,14 @@ int main() {
                     });
                 }
 
-                // SAVE IMAGE EVENT
+                // --- SAVE IMAGE EVENT ---
                 if (keyPress->code == sf::Keyboard::Key::S) {
                     cout << "Saving 4K Image..." << endl;
                     highResEngine.saveImage("output/fractal_4k.png");
                     cout << "Saved!" << endl;
                 }
-                // UNZOOM EVENT
+
+                // --- UNZOOM EVENT --- 
                 if ((keyPress->code == sf::Keyboard::Key::Z || keyPress->code == sf::Keyboard::Key::Backspace) && state == AppState::Idle) {
                     lowResEngine.unZoom();
                     highResEngine.unZoom();
