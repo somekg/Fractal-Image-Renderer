@@ -52,7 +52,7 @@ public:
 	 * @param name Name of the image output.
 	 * @return Measured duration of renderization process (compression excluded).
 	 */ 
-	int run(string name);
+	double run(string name);
 
 	/**
 	 * @brief Adds zoom to zoom list.

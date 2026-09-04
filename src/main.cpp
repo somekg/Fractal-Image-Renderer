@@ -4,6 +4,7 @@
  */
 
 #include "FractalCreator.hpp"
+#include "Zoom.hpp"
 
 using namespace std;
 
@@ -17,10 +18,8 @@ int main()
 	
 	cout << "Please Stand By For A Moment While The Fractal Builds..." << endl;
 
-	Zoom(1920, 1080, 0.01);
+	int duration = fractalCreator.run("output/test3.png");
 
-	int duration = fractalCreator.run("output/test2.png");
-
-	cout << "Finished! Time taken: " << duration << " s" << endl;
-	cout << "The .bmp should be in the project's folder. " << endl;
+	cout << "Render-only time: " << duration << " s" << endl;
+	cout << "Check output folder for the image." << endl;
 }

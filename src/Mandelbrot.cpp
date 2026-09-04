@@ -4,7 +4,6 @@
  * @author Alex
  */
 
-#include <complex>
 #include <iostream>
 #include <math.h>
 
@@ -17,25 +16,30 @@ Mandelbrot::Mandelbrot() {}
 Mandelbrot::~Mandelbrot() {}
 
 double Mandelbrot::getIterations(double x, double y) {
-	const int BAILOUT_RADIUS = 256;
+	const double BAILOUT = 256.0;
+	const double BAILOUT_SQUARED = BAILOUT * BAILOUT; 
 
-	complex<double> z = 0;
-	complex<double> c(x, y);
-	
+	double zReal = 0;
+    double zImag = 0;
+
 	int iterations = 0;
 
 	while (iterations < MAX_ITERATIONS) {
 		// Mandelbrot fractal recursive formula.
-		z = z * z + c;
+		double zRealSq = zReal * zReal;
+        double zImagSq = zImag * zImag;
 
 		// Escape condition.
-		if (abs(z) > BAILOUT_RADIUS) {
+		if (zRealSq + zImagSq > BAILOUT_SQUARED) {
 			// Fractional escape time calculation
-            double z_abs = abs(z);
+            double z_abs = sqrt(zRealSq + zImagSq);
             double fraction = 1.0 - log(log(z_abs)) / log(2.0);
             return iterations + fraction;
 		}
 		
+		zImag = 2.0 * zReal * zImag + y;
+        zReal = zRealSq - zImagSq + x;
+
 		iterations++;
 	}
 
