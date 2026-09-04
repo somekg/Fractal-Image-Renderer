@@ -1,6 +1,6 @@
-Mandelbrot Fractal Viewer
+Mandelbrot-Fractal Explorer
 ------------------------
-A high-resolution, mathematically precise fractal rendering engine built in modern C++17. 
+A high-resolution, mathematically precise fractal rendering engine built in modern C++17 that allows for easy exploration of the fractal. 
 This project generates extremely detailed 4K visualizations of the Mandelbrot set by calculating millions of points on the complex plane.
 
 ## 📊 Performance Optimization & ⏱️ Benchmarking
@@ -40,15 +40,19 @@ Empty space computes instantly, while the black Mandelbrot center requires the m
 <img width="800" height="600" alt="performance_graph2" src="https://github.com/user-attachments/assets/0adf5227-7b8b-445f-8d3a-3aff039a345e" />
 
 ## 🖼️ Samples
-![Normal](https://github.com/user-attachments/assets/51ea77a8-30c9-4a6a-b5ce-ecfa11a74d38)
-![zoom1](https://github.com/user-attachments/assets/8df34d36-5230-4c6c-97f2-b1fea0f8c913)
-![zoom2](https://github.com/user-attachments/assets/0b1a3fa1-db33-41ac-bfd4-e955e8912f68)
-![cool](https://github.com/user-attachments/assets/83a32724-d640-4f27-bd4c-d1f175a8fe14)
-![blue](https://github.com/user-attachments/assets/37b81f37-e12b-49f9-8a73-e59dcda52955)
-![vortex](https://github.com/user-attachments/assets/a8fd1cd8-72aa-4ea1-aa0b-bac9b7cb3520)
-![orange](https://github.com/user-attachments/assets/68c5f5a5-8914-4508-bb8a-cfa5c766e8f0)
-![redcurves](https://github.com/user-attachments/assets/3c7808cc-6da1-4749-927a-3c479731fb72)
-![sword](https://github.com/user-attachments/assets/6eecb2f4-380b-42f9-a886-a1d9efc15f52)
-![Red](https://github.com/user-attachments/assets/656df4ec-4e46-4105-a60a-b2eae93ff0a0)
-![oranger](https://github.com/user-attachments/assets/79a59f8b-2c03-4d5f-b787-765cb569d18a)
-![Toasty](https://github.com/user-attachments/assets/50876fda-98ed-4ef6-abf7-39e8467b403f)
+
+<video src="https://github.com/user-attachments/assets/8260dd04-c55e-4c95-9bb1-91a72477b62b" width="320" height="240" controls></video>
+
+
+
+<img width="2944" height="1656" alt="frame_000_optimized_10000" src="https://github.com/user-attachments/assets/e99c41c7-7e08-4e90-a99c-0f1f4a460825" />
+<img width="3840" height="2160" alt="fractal_4k" src="https://github.com/user-attachments/assets/a3ab12ff-b67f-438a-a894-5c1b04b671e2" />
+<img width="2944" height="1656" alt="fractal_4k_optimized_10000" src="https://github.com/user-attachments/assets/586db860-20c0-4c45-ac70-f58fea11261a" />
+<img width="3840" height="2160" alt="fractal_4k" src="https://github.com/user-attachments/assets/7982b840-8fd1-4eeb-baf1-9d867f35efd3" />
+<img width="3840" height="2160" alt="fractal_4k" src="https://github.com/user-attachments/assets/607ee2fe-e8a7-46f0-8956-c921dcf838e9" />
+<img width="2944" height="1656" alt="fractal_4k_1_optimized_10000" src="https://github.com/user-attachments/assets/a4c120c2-b514-4b8e-9897-88ed6eba19d7" />
+
+
+
+
+
