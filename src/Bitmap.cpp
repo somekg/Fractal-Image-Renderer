@@ -1,5 +1,12 @@
-#include "Bitmap.h"
+/**
+ * @file Bitmap.cpp
+ * @brief Implements the Bitmap class.
+ * @author Alex
+ */
+
 #include <iostream>
+
+#include "Bitmap.h"
 
 // Temporarily disable the missing field warning from the STB library
 #pragma GCC diagnostic push
