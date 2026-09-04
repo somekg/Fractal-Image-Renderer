@@ -3,7 +3,7 @@
  * @brief Fractal creator entry point.
  */
 
-#include "FractalCreator.h"
+#include "FractalCreator.hpp"
 
 using namespace std;
 

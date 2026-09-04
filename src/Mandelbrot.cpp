@@ -8,7 +8,7 @@
 #include <iostream>
 #include <math.h>
 
-#include "Mandelbrot.h"
+#include "Mandelbrot.hpp"
 
 using namespace std;
 
