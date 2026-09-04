@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-#include "Bitmap.h"
+#include "Bitmap.hpp"
 
 // Temporarily disable the missing field warning from the STB library
 #pragma GCC diagnostic push

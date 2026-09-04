@@ -14,10 +14,10 @@
 #include <string>
 #include <vector>
 
-#include "Bitmap.h"
-#include "Mandelbrot.h"
-#include "Zoom.h"
-#include "ZoomList.h"
+#include "Bitmap.hpp"
+#include "Mandelbrot.hpp"
+#include "Zoom.hpp"
+#include "ZoomList.hpp"
 
 using namespace std;
 
