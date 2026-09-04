@@ -55,4 +55,10 @@ public:
      * @return pair<double, double> The calculated fractal coordinates (x, y).
      */
     pair<double,double> doZoom(double x, double y);
+
+    /**
+     * @brief Removes last zoom 
+     */
+    void unZoom();
+
 };

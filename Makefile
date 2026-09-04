@@ -1,7 +1,7 @@
 # Compiler settings
 CXX      := g++
 CXXFLAGS := -Wall -Wextra -O3 -std=c++17 -fopenmp -Iinclude -MMD -MP
-LDFLAGS  := -fopenmp
+LDFLAGS  := -fopenmp -lsfml-graphics -lsfml-window -lsfml-system
 
 # Directories (same as before)
 SRC_DIR   := src

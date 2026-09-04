@@ -5,4 +5,4 @@ benchmark.py
 /benchmarks/
 *.png
 *.csv
-*.gb
+*.gp

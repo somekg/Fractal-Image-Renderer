@@ -47,6 +47,8 @@ public:
 	 */ 
 	void setPixel(int x, int y, uint8_t red, uint8_t green, uint8_t blue);
 	
+	uint8_t* getPixels() const { return m_pPixels.get(); }
+	
 	/**
 	 * @brief Writes png compressed image of the bitmap into memory.
 	 * @param filename Name of the saved file.

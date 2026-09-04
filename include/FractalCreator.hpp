@@ -29,7 +29,9 @@ class FractalCreator
 {
 private:
 	int m_width, m_height;
-	int m_total{ 0 };
+	int m_total{0};
+	int m_palette{0};
+    bool m_useSSAA{true}; 
 
 	Bitmap m_bitmap;
 	ZoomList m_zoomList;
@@ -47,12 +49,30 @@ public:
 	 */
 	virtual ~FractalCreator();
 
+
 	/**
-	 * @brief Initilize fractal image creation process.
-	 * @param name Name of the image output.
+	 * @brief Sets color palette preset for the Cosine Palette.
+	 * @param palette Palette between 0-3.
+	 */ 
+	void setPalette(int palette) { m_palette = palette; }
+
+	/**
+	 * @brief Toggles SSAA on/off. 
+	 * @param use true to toggle SSAA on, false for off. 
+	 */ 
+	void setSSAA(bool use) { m_useSSAA = use; } 
+
+	/**
+	 * @brief Render the fractal image.
 	 * @return Measured duration of renderization process (compression excluded).
 	 */ 
-	double run(string name);
+	double render(); 
+
+	/**
+	 * @brief Saves png image to memory
+	 * @param name File name.
+	 */ 
+	void saveImage(string name);
 
 	/**
 	 * @brief Adds zoom to zoom list.
@@ -61,6 +81,18 @@ public:
 	 * @param zoom Zoom object to add.
 	 */ 
 	void addZoom(const Zoom& zoom);
+
+	/**
+	 * @brief Goes back to last zoom frame.
+	 * @details Delegates job to ZoomList.unZoom()
+	 */ 
+	void unZoom();
+
+	/**
+	 * @brief Returns Bitmap raw pixel information.
+	 * @return Pointer to raw pixel information array.
+	 */ 
+	uint8_t* getPixels() { return m_bitmap.getPixels(); }
 
 private:
 

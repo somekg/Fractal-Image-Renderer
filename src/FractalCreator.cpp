@@ -20,25 +20,43 @@ FractalCreator::FractalCreator(int width, int height):
 
 FractalCreator::~FractalCreator() {}
 
-double FractalCreator::run(string name) {
-    auto render_start = chrono::high_resolution_clock::now();
+double FractalCreator::render() {
+    auto start = chrono::high_resolution_clock::now();
 
-	drawFractal();
+    drawFractal(); 
 
-	auto render_stop = chrono::high_resolution_clock::now();
-	auto render_duration = 
-		chrono::duration_cast<chrono::seconds>(render_stop - render_start);
+    auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double> elapsed = end - start;
 
-	writeBitmap(name);
+    return elapsed.count(); 
+}
 
-	return render_duration.count(); 
+void FractalCreator::saveImage(string name) {
+    writeBitmap(name); // Only happens when the user presses 'S'
 }
 
 void FractalCreator::drawFractal() {
-    double A[] = {0.5, 0.5, 0.5};      
-    double B[] = {0.5, 0.5, 0.5};      
-    double C[] = {1.0, 1.0, 1.0};      
-    double D[] = {0.0, 0.10, 0.20};    
+    double A[3] = {0.5, 0.5, 0.5};      
+    double B[3] = {0.5, 0.5, 0.5};      
+    double C[3] = {1.0, 1.0, 1.0};      
+    double D[3] = {0.0, 0.0, 0.0}; 
+
+    // Procedural Cosine Palettes
+    switch (m_palette % 4) {
+        case 0: // Deep Blue 
+            D[0] = 0.0; D[1] = 0.10; D[2] = 0.20; break;
+        case 1: // Fiery Sunset (Orange/Red/Yellow)
+            D[0] = 0.0; D[1] = 0.33; D[2] = 0.67; break;
+        case 2: // Blood Red & Void Black (Replaced the green one!)
+            A[0] = 0.5; A[1] = 0.0; A[2] = 0.0; 
+            B[0] = 0.5; B[1] = 0.0; B[2] = 0.0; 
+            C[0] = 1.0; C[1] = 1.0; C[2] = 1.0; 
+            D[0] = 0.0; D[1] = 0.0; D[2] = 0.0; 
+            break;
+        case 3: // Neon Synthwave (Pink/Cyan)
+            C[0] = 1.0; C[1] = 1.0; C[2] = 1.0;
+            D[0] = 0.5; D[1] = 0.20; D[2] = 0.25; break;
+    }   
 
     // 2x2 Sub-pixel offsets (0.25 and 0.75)
     double offsets[2] = {0.25, 0.75};
@@ -50,11 +68,18 @@ void FractalCreator::drawFractal() {
             double total_t = 0.0;
             int valid_samples = 0;
 
-            for (int sy = 0; sy < 2; sy++) {
-                for (int sx = 0; sx < 2; sx++) {
+            // Determine how many samples to take
+            int samples = m_useSSAA ? 2 : 1;
+            double no_ssaa_offset[1] = {0.5}; // Center of pixel
+
+            for (int sy = 0; sy < samples; sy++) {
+                for (int sx = 0; sx < samples; sx++) {
                     
+                    double x_off = m_useSSAA ? offsets[sx] : no_ssaa_offset[sx];
+                    double y_off = m_useSSAA ? offsets[sy] : no_ssaa_offset[sy];
+
                     pair<double, double> coords = 
-                        m_zoomList.doZoom(x + offsets[sx], y + offsets[sy]);
+                        m_zoomList.doZoom(x + x_off, y + y_off);
                     
                     double iter = Mandelbrot::getIterations(coords.first, coords.second);
 
@@ -89,6 +114,10 @@ void FractalCreator::drawFractal() {
 
 void FractalCreator::addZoom(const Zoom& zoom) {
     m_zoomList.add(zoom);
+}
+
+void FractalCreator::unZoom() {
+    m_zoomList.unZoom();
 }
 
 void FractalCreator::writeBitmap(string name) {
