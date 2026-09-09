@@ -15,6 +15,7 @@ This project generates extremely detailed 4K visualizations of the Mandelbrot se
 <img width="3840" height="2160" alt="fractal_4k" src="https://github.com/user-attachments/assets/607ee2fe-e8a7-46f0-8956-c921dcf838e9" />
 <img width="2944" height="1656" alt="fractal_4k_1_optimized_10000" src="https://github.com/user-attachments/assets/a4c120c2-b514-4b8e-9897-88ed6eba19d7" />
 <img width="3840" height="2160" alt="fractal_4k" src="https://github.com/user-attachments/assets/0295603e-22f3-4f6b-a7af-937cf7bb752c" />
+<img width="2944" height="1656" alt="fractal_4k_optimized_10000(1)" src="https://github.com/user-attachments/assets/9eff59b8-429b-4e26-ba5e-670a8b084afb" />
 
 ## 🎮 User Controls
 
